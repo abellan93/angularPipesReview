@@ -1,0 +1,148 @@
+<div class="text-layout">
+  <h1>Pipes Básicos</h1>
+  <p>Pipes incluídos en Angular - Usualmente en Common Module</p>
+</div>
+
+<div class="grid">
+  <div class="col-3">
+    <p-card header="Pipe:" subheader="Variable en bruto:"> Resultado: </p-card>
+  </div>
+  <div class="col-3">
+    <p-card header="UPPERCASE" [subheader]="nameLower">{{
+      nameLower | uppercase
+    }}</p-card>
+  </div>
+
+  <div class="col-3">
+    <p-card header="lowercase" [subheader]="nameUpper">{{
+      nameUpper | lowercase
+    }}</p-card>
+  </div>
+  <div class="col-3">
+    <p-card header="Title Case" [subheader]="nameTitle">{{
+      nameTitle | titlecase
+    }}</p-card>
+  </div>
+</div>
+<div class="text-layout">
+  <h1>Pipe de Fechas</h1>
+  <p>Pipes de fechas incluidos en Angular</p>
+</div>
+
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>
+          Fecha:<b> {{ date }}</b>
+        </li>
+        <hr />
+        <li>
+          Fecha formateada con el pipe "date": <b> {{ date | date }} </b>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>
+          Fecha:<b> {{ date }}</b>
+        </li>
+        <hr />
+        <li>
+          Fecha formateada con el pipe "date: short":
+          <b> {{ date | date : "short" }} </b>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>
+          Fecha:<b> {{ date }}</b>
+        </li>
+        <hr />
+        <li>
+          Fecha formateada con el pipe "date: long":
+          <b> {{ date | date : "long" }} </b>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>
+          Fecha:<b> {{ date }}</b>
+        </li>
+        <hr />
+        <li>
+          Fecha formateada con el pipe "date: custom : MMMM":
+          <b> {{ date | date : "MMMM" }} </b>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>
+          Fecha:<b> {{ date }}</b>
+        </li>
+        <hr />
+        <li>
+          Fecha formateada con el pipe "date: custom : MMMM dd, yyyy":
+          <b> {{ date | date : "MMMM dd, yyyy" }} </b>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>
+          Fecha:<b> {{ date }}</b>
+        </li>
+        <hr />
+        <li>
+          Fecha formateada con el pipe "date: custom : GGGG, yyyy MMMMM":
+          <b> {{ date | date : "yyyy, GGGG" }} </b>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+</div>
+<hr />
+<p>Pipes de fechas con timezone</p>
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>
+          Fecha:<b> {{ date }}</b>
+        </li>
+        <hr />
+        <li>
+          Fecha formateada con el pipe 'date : "long" : "GMT0"':
+          <b> {{ date | date : "long" : "GMT0" }} </b>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>
+          Fecha:<b> {{ date }}</b>
+        </li>
+        <hr />
+        <li>
+          Fecha formateada con el pipe "date : "long" : "GMT+0":'fr'":
+          <b> {{ date | date : "long" : "GMT+0":'fr' }} </b>
+        </li>
+      </ul>
+    </p-card>
+  </div>
+</div>

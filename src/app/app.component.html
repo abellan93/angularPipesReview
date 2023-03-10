@@ -1,15 +1,2 @@
-
-
-<p-card header="{{ name | titlecase }}"
-        subheader=" Salario: {{ value | number }}">
-        {{ obj | json }}
-<p-footer><button
-    pButton
-    icon="pi pi-bell"
-    iconPos="right"
-    class="p-button-help"
-    (click)="showFullName()"
-    label="Mostrar nombre completo
-  "
-  ></button></p-footer>
-</p-card>
+<app-menu></app-menu>
+<router-outlet></router-outlet>

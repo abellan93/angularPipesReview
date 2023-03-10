@@ -1,0 +1,101 @@
+<div class="text-layout">
+  <h1>Pipes no comunes</h1>
+  <p>Pipes incluídos en Angular - Usualmente en Common Module</p>
+</div>
+
+<div class="grid">
+  <div class="md:col-6">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      <p>
+        Saludos {{ name }} es un placer {{ gender | i18nSelect : inviteMap }} a
+        nuestro evento.
+      </p>
+      <button
+        pButton
+        type="button"
+        label="Cambiar Persona"
+        class="p-button-success m-2"
+        (click)="changePerson()"
+      ></button>
+    </p-fieldset>
+  </div>
+  <div class="md:col-6">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>Actualmente {{ clients.length | i18nPlural : clientMap }}</p>
+      <button
+        *ngIf="clients.length > 0; else refresh"
+        pButton
+        type="button"
+        label="Borrar cliente"
+        class="p-button-danger m-2"
+        (click)="deleteClient()"
+      ></button>
+      <ng-template #refresh>
+        <button
+          pButton
+          type="button"
+          label="Refresh List"
+          class="p-button-primary m-2"
+          (click)="refreshList()"
+        ></button>
+      </ng-template>
+    </p-fieldset>
+  </div>
+  <div class="md:col-12">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+      <div class="grid">
+        <div class="md:col-6">
+          <b>Original</b>
+          <pre>{{ clients }}</pre>
+        </div>
+        <div class="md:col-6">
+          <b>Slice:0</b>
+          <pre>{{ clients | slice : 0 }}</pre>
+          <hr />
+          <b>Slice:1:2</b>
+          <pre>{{ clients | slice : 1 : 2 }}</pre>
+          <hr />
+          <b>Slice:1:4</b>
+          <pre>{{ clients | slice : 1 : 4 }}</pre>
+          <button
+            *ngIf="clients.length > 0; else refresh"
+            pButton
+            type="button"
+            label="Borrar cliente"
+            class="p-button-danger m-2"
+            (click)="deleteClient()"
+          ></button>
+          <ng-template #refresh>
+            <button
+              pButton
+              type="button"
+              label="Refresh List"
+              class="p-button-primary m-2"
+              (click)="refreshList()"
+            ></button>
+          </ng-template>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+  <div class="md:col-6">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of person | keyvalue">
+          <b>{{ item.key | titlecase }}</b> : {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+    <br>
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <pre>{{ myObservable | async }}</pre>
+    </p-fieldset>
+  </div>
+  <div class="md:col-6">
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      <pre>{{ heroes | json }}</pre>
+    </p-fieldset>
+  </div>
+  
+  
+</div>

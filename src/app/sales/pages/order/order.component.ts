@@ -3,9 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class OrderComponent {
+  case: boolean = true;
 
+  capsChange() {
+    this.case = !this.case;
+  }
 }

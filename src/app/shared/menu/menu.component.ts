@@ -19,24 +19,25 @@ export class MenuComponent {
           {
             label: 'Textos y fechas',
             icon: 'pi pi-align-left',
-            routerLink:' '
+            routerLink: ' ',
           },
           {
             label: 'Números',
             icon: 'pi pi-dollar',
-            routerLink:'numbers'
+            routerLink: 'numbers',
           },
           {
             label: 'No comunes',
             icon: 'pi pi-globe',
-            routerLink:'not-commons'
+            routerLink: 'not-commons',
           },
         ],
       },
       {
-        label:'Pipes personalizados',
-        icon: 'pi-picog'
-      }
+        label: 'Pipes personalizados',
+        icon: 'pi-picog',
+        routerLink: 'order',
+      },
     ];
   }
 }

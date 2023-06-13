@@ -86,9 +86,17 @@
         </li>
       </ul>
     </p-fieldset>
-    <br>
+    <br />
     <p-fieldset legend="Async Pipe" [toggleable]="true">
-      <pre>{{ myObservable | async }}</pre>
+      <pre *ngIf="!(myObservable | async)">Resolviendo observable</pre>
+      <b>
+        <pre>{{ myObservable | async }}</pre>
+      </b>
+
+      <pre *ngIf="!(promiseValue | async)">Resolviendo promesa</pre>
+      <b>
+        <pre>{{ promiseValue | async }}</pre>
+      </b>
     </p-fieldset>
   </div>
   <div class="md:col-6">
@@ -96,6 +104,4 @@
       <pre>{{ heroes | json }}</pre>
     </p-fieldset>
   </div>
-  
-  
 </div>

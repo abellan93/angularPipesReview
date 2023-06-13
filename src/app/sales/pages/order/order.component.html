@@ -1,1 +1,11 @@
-<p>order works!</p>
+<div class="text-layout">
+    <h1>Pipes personalizados</h1>
+    <p>Pipes creados por {{'nOsOtrOs' | case:upper}}.</p>
+    <button
+              pButton
+              type="button"
+              label="Cambiar mayúsculas"
+              class="p-button-primary m-2"
+              (click)="changeCase()"
+            ></button>
+</div>

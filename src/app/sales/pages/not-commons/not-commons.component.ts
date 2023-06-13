@@ -66,5 +66,10 @@ export class NotCommonsComponent {
   ];
 
   //Async Pipe
-  myObservable = interval(1000);
+  myObservable = interval(4500)
+  promiseValue = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve('Fin de la promsea')
+    },3500)
+  });
 }

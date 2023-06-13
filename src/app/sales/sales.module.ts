@@ -5,6 +5,7 @@ import { NotCommonsComponent } from './pages/not-commons/not-commons.component';
 import { CommonsComponent } from './pages/commons/commons.component';
 import { OrderComponent } from './pages/order/order.component';
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+import { CasePipe } from './pipes/case.pipe';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
     NotCommonsComponent,
     CommonsComponent,
     OrderComponent,
+    CasePipe
   ],
   imports: [CommonModule, PrimeNgModule],
   exports: [
